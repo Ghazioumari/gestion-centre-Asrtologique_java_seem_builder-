@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="vbb" prefHeight="402.0" prefWidth="601.0" style="-fx-background-color: #E5D4FF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g.a_astro_centre.Satt_naturelController">
+   <children>
+      <AnchorPane prefHeight="402.0" prefWidth="206.0" style="-fx-background-color: #2B2A4C;">
+         <children>
+            <Label layoutX="10.0" layoutY="71.0" text="Nom" textFill="#fcf8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="123.0" text="Orbite" textFill="#fcf8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtnom" layoutX="62.0" layoutY="67.0" prefHeight="26.0" prefWidth="138.0" />
+            <TextField fx:id="txtorbit" layoutX="63.0" layoutY="119.0" prefHeight="26.0" prefWidth="138.0" />
+            <TextField fx:id="txtvitess" layoutX="63.0" layoutY="172.0" prefHeight="26.0" prefWidth="138.0" />
+            <TextField fx:id="txtdiamet" layoutX="64.0" layoutY="223.0" prefHeight="26.0" prefWidth="138.0" />
+            <TextField fx:id="txtpetride_rev" layoutX="64.0" layoutY="270.0" prefHeight="26.0" prefWidth="138.0" />
+            <Label layoutX="9.0" layoutY="179.0" text="Vitesse" textFill="#fcf8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="227.0" text="Diametre" textFill="#fcf8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="274.0" text="Peri_Revo" textFill="#fcf8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button layoutX="15.0" layoutY="339.0" mnemonicParsing="false" onAction="#add" style="-fx-background-color: brown;" text="Add" textFill="#faf5f5" />
+            <Button layoutX="71.0" layoutY="338.0" mnemonicParsing="false" onAction="#delete" style="-fx-background-color: brown;" text="Delete" textFill="#faf5f5" />
+            <Button layoutX="134.0" layoutY="337.0" mnemonicParsing="false" onAction="#Update" style="-fx-background-color: brown;" text="Update" textFill="#faf5f5" />
+            <Label layoutX="31.0" layoutY="28.0" prefHeight="18.0" prefWidth="138.0" style="-fx-background-color: brown;" text="     Donnees sattelite" textFill="#fcf8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table_st_n" layoutX="214.0" layoutY="40.0" onMouseClicked="#rowClicked" prefHeight="200.0" prefWidth="379.0">
+        <columns>
+          <TableColumn fx:id="col_nom" prefWidth="75.0" text="Nom" />
+          <TableColumn fx:id="col_orbite" prefWidth="75.0" text="Orbite" />
+            <TableColumn fx:id="col_vit" prefWidth="75.0" text="Vitesse" />
+            <TableColumn fx:id="col_dia" prefWidth="75.0" text="Diametre" />
+            <TableColumn fx:id="col_per_rev" prefWidth="75.0" text="Per_rev" />
+        </columns>
+      </TableView>
+      <Button layoutX="371.0" layoutY="338.0" mnemonicParsing="false" onAction="#men" style="-fx-background-color: brown;" text="retour" textFill="#faf5f5" />
+      <Label layoutX="303.0" layoutY="20.0" prefHeight="18.0" prefWidth="125.0" style="-fx-background-color: brown;" text="       sattelites_Naturel" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="labnbr" layoutX="434.0" layoutY="20.0" prefHeight="18.0" prefWidth="22.0" style="-fx-background-color: brown;" text="     " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

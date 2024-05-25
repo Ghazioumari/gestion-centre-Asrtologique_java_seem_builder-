@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="vbb" prefHeight="358.0" prefWidth="313.0" style="-fx-background-color: #617289;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g.a_astro_centre.PersonnelController">
+   <children>
+      <VBox layoutX="58.0" layoutY="73.0" prefHeight="250.0" prefWidth="238.0" spacing="20.0" style="-fx-background-color: black;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#home" prefHeight="78.0" prefWidth="456.0" style="-fx-background-color: transpere; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: white;" text="MENU" textAlignment="CENTER" textFill="#f4eaea">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#employer" prefHeight="73.0" prefWidth="238.0" style="-fx-background-color: transpere; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: white;" text="EMPLOYERS" textFill="#f4eaea">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#observ" prefHeight="78.0" prefWidth="459.0" style="-fx-background-color: transpere; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: white;" text="OBSERVATEURS" textFill="#f4eaea">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Label layoutX="-1.0" layoutY="347.0" prefHeight="10.0" prefWidth="114.0" style="-fx-background-color: white;" />
+      <Label layoutY="231.0" prefHeight="126.0" prefWidth="13.0" style="-fx-background-color: white;" />
+      <Label layoutX="341.0" layoutY="10.0" prefHeight="126.0" prefWidth="14.0" style="-fx-background-color: white;" />
+      <Circle fill="#3b69a4" layoutX="1.0" layoutY="30.0" radius="94.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="-20.0" layoutY="46.0" prefHeight="26.0" prefWidth="150.0" rotate="-45.0" text="NOS PERSONNELS" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="241.0" layoutY="-1.0" prefHeight="10.0" prefWidth="114.0" style="-fx-background-color: white;" />
+   </children>
+</AnchorPane>

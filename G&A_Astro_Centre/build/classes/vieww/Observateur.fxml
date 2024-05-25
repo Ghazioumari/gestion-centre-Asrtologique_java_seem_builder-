@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="vbb" prefHeight="295.0" prefWidth="730.0" style="-fx-background-color: #E5D4FF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g.a_astro_centre.ObservateurController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="190.0" style="-fx-background-color: #2B2A4C;">
+         <children>
+            <TextField fx:id="txtnom" layoutX="8.0" layoutY="45.0" promptText="Nom" />
+            <TextField fx:id="txtpren" layoutX="7.0" layoutY="84.0" promptText="Prenom" />
+            <TextField fx:id="txtemail" layoutX="6.0" layoutY="124.0" promptText="Email@gmail.com" />
+            <TextField fx:id="txttele" layoutX="7.0" layoutY="163.0" promptText="Telphone" />
+            <TextField fx:id="txtadress" layoutX="8.0" layoutY="203.0" promptText="Adresse" />
+            <TextField fx:id="txtobj" layoutX="8.0" layoutY="243.0" promptText="Objectif" />
+            <TextField fx:id="txtmontan" layoutX="7.0" layoutY="287.0" promptText="Montant" />
+            <Button layoutX="4.0" layoutY="334.0" mnemonicParsing="false" onAction="#add" style="-fx-background-color: brown;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="128.0" layoutY="335.0" mnemonicParsing="false" onAction="#update" style="-fx-background-color: brown;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="58.0" layoutY="335.0" mnemonicParsing="false" onAction="#delete" style="-fx-background-color: brown;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="21.0" layoutY="17.0" style="-fx-background-color: brown;" text="Donnees Observateus" textFill="#f4ecec">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="415.0" layoutY="335.0" mnemonicParsing="false" onAction="#retuur" style="-fx-background-color: brown;" text="Retour" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableobser" layoutX="189.0" layoutY="42.0" onMouseClicked="#rowClicked" prefHeight="200.0" prefWidth="528.0">
+        <columns>
+          <TableColumn fx:id="colnom" prefWidth="75.0" text="Nom" />
+          <TableColumn fx:id="colpreenom" prefWidth="75.0" text="Prenom" />
+            <TableColumn fx:id="colemail" prefWidth="75.0" text="email" />
+            <TableColumn fx:id="coltele" prefWidth="75.0" text="telephone" />
+            <TableColumn fx:id="coladress" prefWidth="75.0" text="adresse" />
+            <TableColumn fx:id="colobj" prefWidth="75.0" text="objectif" />
+            <TableColumn fx:id="colmontant" prefWidth="75.0" text="Montant" />
+        </columns>
+      </TableView>
+      <Label layoutX="474.0" layoutY="242.0" prefHeight="18.0" prefWidth="58.0" style="-fx-background-color: brown;" text="tot_gain" textFill="#f4ecec">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="labnbobs" layoutX="474.0" layoutY="17.0" prefHeight="18.0" prefWidth="28.0" style="-fx-background-color: brown;" textFill="#f4ecec">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="tot_gain" layoutX="543.0" layoutY="242.0" prefHeight="18.0" prefWidth="58.0" style="-fx-background-color: white;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="vbb" prefHeight="390.0" prefWidth="588.0" style="-fx-background-color: #E5D4FF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="g.a_astro_centre.EvenementController">
+   <children>
+      <AnchorPane prefHeight="394.0" prefWidth="214.0" style="-fx-background-color: #2B2A4C;">
+         <children>
+            <Label layoutX="11.0" layoutY="23.0" prefHeight="18.0" prefWidth="179.0" style="-fx-background-color: brown;" text="     Donnees Evenements" textFill="#f4eeee">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtlieu" layoutX="23.0" layoutY="132.0" prefHeight="26.0" prefWidth="156.0" promptText="Lieu" />
+            <TextField fx:id="txtGain" layoutX="23.0" layoutY="238.0" prefHeight="26.0" prefWidth="156.0" promptText="Gain" />
+            <Button layoutX="14.0" layoutY="314.0" mnemonicParsing="false" onAction="#Add" style="-fx-background-color: brown;" text="Add" textFill="#f7eded">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="138.0" layoutY="314.0" mnemonicParsing="false" onAction="#Update" style="-fx-background-color: brown;" text="Update" textFill="#f7eded">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="71.0" layoutY="314.0" mnemonicParsing="false" onAction="#delete" style="-fx-background-color: brown;" text="Dalete" textFill="#f7eded">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <DatePicker fx:id="textdate" layoutX="22.0" layoutY="83.0" prefHeight="26.0" prefWidth="156.0" promptText="Date" />
+            <RadioButton fx:id="educat" accessibleText="Educatif" layoutX="13.0" layoutY="197.0" mnemonicParsing="false" text="Obsevatif" textFill="#f7f0f0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="typee" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="obser" accessibleText="Observatif" layoutX="109.0" layoutY="197.0" mnemonicParsing="false" text="Educatif" textFill="WHITE" toggleGroup="$typee">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="22.0" layoutY="171.0" prefHeight="18.0" prefWidth="156.0" text="Type" textFill="#f2eaea">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="292.0" layoutY="29.0" prefHeight="18.0" prefWidth="138.0" style="-fx-background-color: brown;" text="          Les Evenements" textFill="#f4eeee">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="357.0" layoutY="343.0" mnemonicParsing="false" onAction="#retour" style="-fx-background-color: brown;" text="Retour" textFill="#f7eded">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="table" layoutX="233.0" layoutY="49.0" onMouseClicked="#rowClicked" prefHeight="200.0" prefWidth="302.0">
+        <columns>
+          <TableColumn fx:id="coldate" prefWidth="75.0" text="Date" />
+          <TableColumn fx:id="collieu" prefWidth="75.0" text="Lieu" />
+            <TableColumn fx:id="coltype" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="colgain" prefWidth="75.0" text="Gain" />
+        </columns>
+      </TableView>
+      <Label fx:id="lab_nb" layoutX="436.0" layoutY="29.0" prefHeight="18.0" prefWidth="17.0" style="-fx-background-color: brown;" textFill="#f4eeee">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lab_tot" layoutX="480.0" layoutY="249.0" prefHeight="18.0" prefWidth="54.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="398.0" layoutY="250.0" prefHeight="18.0" prefWidth="58.0" style="-fx-background-color: brown;" text="Gain_total" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
